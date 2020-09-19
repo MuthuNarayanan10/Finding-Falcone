@@ -1,0 +1,8 @@
+.footer {
+  width: 100%;
+  box-shadow: 0 -2px 10px 0 rgba(0, 0, 0, 0.15);
+  z-index: 999;
+  background:#8f83d8;
+  height: 50px;
+  color: white;
+}

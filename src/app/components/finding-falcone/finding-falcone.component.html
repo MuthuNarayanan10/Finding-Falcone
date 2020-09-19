@@ -1,0 +1,95 @@
+<div class="bg">
+  
+</div>
+
+<div class="uk-container ms-margin-75 ms-margin-bottom-80">
+  <div
+    class="title uk-flex uk-flex-center uk-flex-middle uk-margin-top"
+    uk-margin
+  >
+    <h1 class="uk-h1">
+      FIND WHERE KING SHAN!
+    </h1>
+  </div>
+  <div class="sub-title uk-flex uk-flex-center uk-flex-middle" uk-margin>
+    <div class="uk-h3">
+     PLEASE SELECT YOUR PLANET WHERE YOU WISH TO SEARCH
+    </div>
+  </div>
+  <div
+    class="destinationsWrapper uk-flex uk-flex-center  uk-flex-wrap uk-flex-around uk-margin"
+  >
+    <div class="destination uk-margin-right uk-margin-bottom">
+      <div class="uk-h5 uk-margin-small-bottom">
+        Destination-1
+      </div>
+      <app-destination
+        [destinationIndex]="1"
+        [planets]="availablePlanets"
+        [totalPlanets]="planets"
+        [vehicles]="vehicles"
+        (selectedDestination)="onSelectedDestination($event)"
+      ></app-destination>
+    </div>
+    <div class="destination uk-margin-right uk-margin-bottom">
+      <div class="uk-h5 uk-margin-small-bottom">
+        Destination-2
+      </div>
+      <app-destination
+        [destinationIndex]="2"
+        [planets]="availablePlanets"
+        [vehicles]="vehicles"
+        [totalPlanets]="planets"
+        (selectedDestination)="onSelectedDestination($event)"
+      ></app-destination>
+    </div>
+    <div class="destination uk-margin-right uk-margin-bottom">
+      <div class="uk-h5 uk-margin-small-bottom">
+        Destination-3
+      </div>
+      <app-destination
+        [destinationIndex]="3"
+        [planets]="availablePlanets"
+        [vehicles]="vehicles"
+        [totalPlanets]="planets"
+        (selectedDestination)="onSelectedDestination($event)"
+      ></app-destination>
+    </div>
+    <div class="destination uk-margin-right uk-margin-bottom">
+      <div class="uk-h5 uk-margin-small-bottom">
+        Destination-4
+      </div>
+      <app-destination
+        [destinationIndex]="4"
+        [planets]="availablePlanets"
+        [vehicles]="vehicles"
+        [totalPlanets]="planets"
+        (selectedDestination)="onSelectedDestination($event)"
+      ></app-destination>
+    </div>
+  </div>
+
+  <div class="sub-title uk-flex uk-flex-center uk-flex-middle" uk-margin>
+    <div class="uk-h3">Time taken: {{ timeToReachDestination }}</div>
+  </div>
+
+  <div  class="sub-title uk-flex uk-flex-center uk-flex-middle" uk-margin>
+    <div class="uk-h3">GEEK TRUST PROBLEM</div>
+  
+  </div>
+
+  <div  class="sub-title uk-flex uk-flex-center uk-flex-middle" uk-margin>
+    <a class="uk-h3">https://www.geektrust.in/</a>
+  
+  </div>
+  <div
+    class="findFalconeButton uk-margin uk-flex uk-flex-center uk-flex-middle"
+    *ngIf="selectedDestinations.length > 3"
+  >
+    <p uk-margin>
+      <button class="uk-button uk-button-primary" (click)="findFalcone($event)">
+        Find Falcone
+      </button>
+    </p>
+  </div>
+</div>

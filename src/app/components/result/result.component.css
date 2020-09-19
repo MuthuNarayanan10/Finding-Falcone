@@ -1,0 +1,12 @@
+.resultWrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+
+}
+.uk-button
+{
+  background-color: #8f83d8;
+  color: white;
+}
